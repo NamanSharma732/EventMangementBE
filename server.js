@@ -8,9 +8,14 @@ const eventRoutes = require("./Routes/eventroutes");
 const taskRoutes = require("./Routes/taskroutes");
 const attendeeRoutes = require("./Routes/attendeeroutes")
 
-app.use(cors());
+
 app.use(express.json());
-app.options("*", cors());
+const corsOptions = {
+  origin: "http://localhost:1323",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 const connectDB = async () => {
   try {
