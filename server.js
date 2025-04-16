@@ -11,7 +11,7 @@ const attendeeRoutes = require("./Routes/attendeeroutes")
 
 app.use(express.json());
 const corsOptions = {
-  origin: "http://localhost:1323",
+  origin: "https://event-management-ecus461cr-namans-projects-01b4be72.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 };
