@@ -39,6 +39,9 @@ app.listen(PORT, () => {
   console.log(`Server started at port ${PORT}`);
 });
 
+app.get('/ping', (req, res) => {
+  res.status(200).send('pong');
+});
 
 app.get("/", (req, res) => {
   res.send("Hello World");
